@@ -38,5 +38,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: "taqiudin.ahyari@gmail.com"
-      - run: heroku addons:create heroku-postgresql:hobby-dev
-      - run: heroku npx seuqelize-cli db:migrate --env production
+      # add postgresql and run migrations
+      #- run: heroku addons:create heroku-postgresql:hobby-dev
+      #- run: heroku run npx sequelize-cli db:migrate --env production
